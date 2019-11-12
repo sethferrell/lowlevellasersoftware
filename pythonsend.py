@@ -5,8 +5,8 @@ import serial
 com = serial.Serial('/dev/tnt1')
 
 textfile = open('scipt.txt', 'r')
-data = textfile.read()
 
+data = textfile.read()
 
 no = com.write(data)
 
