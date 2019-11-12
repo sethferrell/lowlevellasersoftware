@@ -7,7 +7,8 @@ def sendFile(port, filename)
 	com = serial.Serial(port)
 	textfile = open(filename, 'r')
 	data = textfile.read()
-
+	data = bytearray(data)
+	
 	no = com.write(data)
 
 	textfile.close()
